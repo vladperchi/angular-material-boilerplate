@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="inputSideNav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a mat-button routerLink="/" aria-label="Angular Material">
+            <img class="angular-logo" src="../assets/angular-white-transparent.svg">
+            <span style="font-weight:lighter;font-size: larger;">angular material boilerplate</span>
+        </a>
+        <span class="nav-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>person</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
