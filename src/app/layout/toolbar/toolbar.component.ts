@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,9 +9,14 @@ import { MatSidenav } from '@angular/material/sidenav'
 })
 export class ToolbarComponent implements OnInit {
   @Input() inputSideNav: MatSidenav;
+  isDarkMode: boolean;
+  @Output() darkModelToggled = new EventEmitter<{ isDarkMode: boolean }>();
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-
+  toggleDarkMode()
+  {
+    this.darkModelToggled.emit({ isDarkMode: !this.isDarkMode });
+  }
 }

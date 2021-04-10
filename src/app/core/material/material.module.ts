@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from "@angular/material/menu";
 
 const Modules =
   [
@@ -15,7 +17,9 @@ const Modules =
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatMenuModule
   ];
 
 @NgModule({

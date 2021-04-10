@@ -1,14 +1,16 @@
-<mat-sidenav-container class='sidenav-container'>
+<mat-sidenav-container class='sidenav-container mat-app-background {{themeVariant}}'>
   <mat-sidenav #sidenav class="sidenav" mode="push">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
-  <app-toolbar [inputSideNav]="sidenav"></app-toolbar>
+  <app-toolbar [inputSideNav]="sidenav" (darkModelToggled)="onDarkModeToggled($event)"></app-toolbar>
   <div class="content">
     <div class="container">
-      <router-outlet></router-outlet>
-      <h1 class="mat-h1">Angular Material</h1>
-      <h2> Material Design components for Angular</h2>
-      <a mat-raised-button color="primary" routerLink="/guide/getting-started">Get started</a>
-    </div>    
+      <router-outlet>
+        <h1 class="mat-h1">Angular Material Boilerplate</h1>
+        <h2> Material Design components for Angular</h2>
+        <a mat-raised-button color="primary" routerLink="/guide/getting-started">Get started</a>
+      </router-outlet>
+
+    </div>
   </div>
 </mat-sidenav-container>
