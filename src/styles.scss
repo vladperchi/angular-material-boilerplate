@@ -22,13 +22,14 @@ $app-theme:   mat-light-theme((
 
 // Define an alternate dark theme.
 $dark-primary: mat-palette($mat-grey,A800);
-$dark-accent:  mat-palette($mat-grey, A800);
+$dark-accent:  mat-palette($mat-grey,A800);
 $dark-warn:    mat-palette($mat-deep-orange);
 $dark-theme:   mat-dark-theme((
   color: (
     primary: $dark-primary,
     accent: $dark-accent,
     warn: $dark-warn,
+
   )
 ));
 
@@ -59,4 +60,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 ::-webkit-scrollbar-thumb {
     background: gainsboro;
     border-radius: 10px;
+}
+
+.dark-theme .mat-drawer.mat-drawer-push
+{
+  background-color: #212121!important;
 }
