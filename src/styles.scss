@@ -50,3 +50,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mr-8{
     margin-right: 8px;
 }
+::-webkit-scrollbar {
+    width: 4px;
+    overflow-y: scroll;
+    background: white;
+    box-shadow: inset 0 0 0px gainsboro;
+}
+::-webkit-scrollbar-thumb {
+    background: gainsboro;
+    border-radius: 10px;
+}
