@@ -4,6 +4,12 @@
 
 Probably by June 15,2021! 🚀
 
+## Roadmap
+
+- Basic Material Integration
+- Dark Mode with LocalStorage
+- Side Navbar Implementation
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
