@@ -10,12 +10,13 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class ToolbarComponent implements OnInit {
   @Input() darkModeIcon: string;
   @Input() inputSideNav: MatSidenav;
-  @Input() isDarkMode: boolean = true;
+  @Input() isDarkMode: boolean;
   @Output('darkModelToggled') darkModelToggled = new EventEmitter<{ isDarkMode: boolean, darkModelIcon: string  }>();
   constructor(private localStorageService: LocalStorageService) { }
   ngOnInit() {
-     let themeVariant = this.localStorageService.getItem('themeVariant');
+    let themeVariant = this.localStorageService.getItem('themeVariant');
     this.darkModeIcon = themeVariant === 'dark-theme' ? 'bedtime' : 'brightness_5';
+    this.isDarkMode = themeVariant === 'dark-theme' ? true : false;
   }
   toggleDarkMode()
   {

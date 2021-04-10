@@ -16,6 +16,7 @@ export class AppComponent {
     this.themeVariant = this.localStorageService.getItem('themeVariant'); 
   }
   onDarkModeToggled(data: { isDarkMode: boolean, darkModeIcon:string }) {
+    console.log(data.isDarkMode);
     this.themeVariant = data.isDarkMode ? 'dark-theme' : '';
     this.localStorageService.setItem('themeVariant',this.themeVariant);
     this.darkModeIcon = data.darkModeIcon;
